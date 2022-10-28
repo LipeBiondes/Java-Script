@@ -1,0 +1,264 @@
+Primeiros códigos:
+
+Window.alert("Olá")
+Window.confirm('Tem certeza?')
+Window.prompt("Qual o seu nome?")
+
+como comentar? "//" ou "/* */".
+
+Variáveis:
+
+vaga a1 = carro1 ("=", lê-se recebe)
+a1 = null ("null" não recebe nada)
+var n1 = 5
+var n2 = 8.5
+var n3 = 15
+
+var s1 = "javascript"
+var s2 = 'Curso em vídeo'
+var s3 = `Guanabara`
+
+Identificadores:
+
+-Podem começar com letra, $ ou _.
+-Não podem começar por números.
+-É possível usar letras e números.
+-É possível usar acentos e símbolos.
+-Não podem conter espaços
+-Não podem ser palavras reservadas
+
+Conversores:
+
+string para número:
+
+Number.parseInt(n)
+Number.parseFloat(n)
+Number(n)
+var n1 = Number(window.prompt('Digite um número'))
+
+número para strings:
+
+String(n)
+n.toString()
+
+Formatando Strings:
+
+var s = 'JavaScript'
+'Eu estou aprendendo s'     // não faz interpolação
+'Eu  estou aprendendo' + s // usa concatenação
+`Eu estou aprendendo ${s}` // usa template string
+s.length                   // quantos caracteres a string tem
+s.toUpperCase()            // tudo para 'MAIÚSCULAS'
+
+Formatando Números:
+
+var n1 = 1543.5
+n1
+n1.toFixed(2) //mostrar duas casas após as vírgula
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL',}) // coloca o cifrão de acordo com a terminação "BRl", "USD" etc...
+
+Operadores
+
+Operadores aritméticos:
+
+5 + 2   = 7 (soma)
+5 - 2   = 3 (subtração)
+5 * 2    = 10 (multiplicação)
+5 / 2    = 2.5 (divisão)
+5 % 2    = 1 (resto)
+5 ** 2   = 25 (potência)
+
+Simplificação
+
+Operadores de atribuição
+
+var n = 3 atribuição simples
+
+n = n + 4   ou  n += 4
+n = n - 5   ou  n -= 5
+n = n * 4   ou  n *= 4
+n = n / 2   ou  n /= 2
+n = n  ** 2 ou  n **= 2
+n = n % 5   ou  n %= 5
+
+var x = 5
+
+x = x + 1   ou  x ++
+x = x - 1   ou  x --
+
+Operadores Relacionais
+
+5 > 2   = true  (Maior que)
+7 < 4   = false (Menor que)
+8 >= 8  = true  (Maior ou igual a)
+9 <= 7  = false (Menor ou igual a)
+5 == 5  = true  (Igual a)
+4 != 4  = false (Diferente de)
+
+Identidade
+
+5 == 5 -> true
+5 == '5' -> true
+5 === '5' -> false (5 é idêntico a '5' ?)
+5 === 5 -> true
+
+Operadores Lógicos
+
+!   negação/não
+&&  conjunção/e
+||  disjunção/ou
+
+Ordem de precedência
+
+1 = Aritméticos
+2 = Relacionais
+3 = Lógicos
+
+Operadores Ternários
+
+? :
+teste ? true : false
+
+média = 10.0
+média >= 7.0 ? "aprovado" : "reprovado"
+> "aprovado"
+
+O que é DOM?
+
+DOM = Document Object Model
+
+Árvore DOM
+                window
+            /      |      \
+     location   Document  history
+                   |
+                  html
+                /      \
+              head       body
+            /  |       / / \ \
+        meta  title   / /   \ \
+                    h1  p    p div
+                             |
+                           strong
+
+Selecionando
+
+por Marca: getElementsByTagName()
+por Id: getElementsById()
+por Nome: getElementsByName()[0]
+por Classe: getElementsByClassName()
+por Seletor:    querySelector() ou querySelectorAll('div#id')
+
+div = #
+class = .
+
+Eventos DOM
+
+com o mouse:
+mouseenter, mousemove, mousedown, mouseup, click, mouseout
+
+function ação(parâmetro){
+
+}
+
+Condições em JavaScript
+
+Condição simples:
+
+if(){
+
+}
+
+Condição composta:
+
+if(condição){
+  true
+}
+else{
+  false
+}
+
+Condição Múltipla:
+
+switch (expressão){
+  case valor 1:
+
+  break
+
+  case valor 2:
+
+  break
+  
+  case valor 3:
+
+  break
+  
+  default:
+}
+
+Repetições
+
+while(condição){
+
+}
+
+do{
+
+}while()
+
+for (let c = 0;c <= 10; c++){
+
+}
+
+Variáveis compostas
+
+Variável Simples - Só consegue armazenar um valor por vez.
+Variável Composta - Consegue armazenar mais de um valor em uma mesma estrutura.
+
+vaga a = [a0, a1, a2]
+Cada array (vetor) contém elementos e cada elemento contém uma chave (índice) e cada chave contem um conteúdo (valor)
+
+let = num[5,8,4]
+
+let n = [2,4,5]
+n[3]=6
+n.push(7) // Push coloca o número na última posição do vetor
+console.log(`Nosso vetor contém: ${n}`)
+R: Nosso vetor contém: 2,4,5,6,7
+n.length
+n.sort() (coloca os valores em ordem crescente)
+
+Funções em JavaScript
+
+toda função pode ter uma chamada, um parâmetro, uma ação e um retorno
+
+Objetos, diferença entre objeto e array
+
+array = let num = [ , , ]
+objeto = let amigo = {nome:'José',sexo:'M',peso:85.5,engordar(p){}}
+
+Ex:
+
+let amigo ={nome:'José',
+sexo:'M',
+peso:85.5,
+engordar(p){
+  console.log('Ola Imundo!')
+  this.peso += p
+}
+}
+amigo.engordar(2)
+console.log(`${amigo.nome} pesa ${amigo.peso}KG`)
+
+Próximos passos no JavaScript
+  Estudar sobre:
+
+-html e css
+-functions
+-Objetos
+-Modularização
+-RegEx
+-JSON
+-AJAX
+-NodeJS
+-
